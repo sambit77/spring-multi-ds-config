@@ -11,4 +11,4 @@
 1. Setup your datasources using docker (Run 2 different db)
 2. Update application.yml to connect to both the databases
 3. Define your entities and repositories class in separate packages
-4. 
+4. Define 2 datasource config to match the datasource to entity and repository packages 
