@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "e7b69e54-88db-4ee1-a36e-a5ed5d32ac33",
+		"name": "postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40608580"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/secondary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderDetails\": \"sample order\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/secondary",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"secondary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/primary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/primary",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"primary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
