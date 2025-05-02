@@ -13,5 +13,5 @@
 3. Define your entities and repositories class in separate packages
 4. Define 2 datasource config to match the datasource to entity and repository packages
 
-Main branch :- Configure 2 datasources and use JPA for  dataaccess 
+Main branch :- Configure 2 datasources and use JPA for  dataaccess  <br>
 EntityManager branch:- Configure 2 datasources and use EntityManager to execute stored procedures / queries etc.
