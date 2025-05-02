@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: spring-multi-ds-config
+
+  datasource:
+    primary:
+      jdbc-url: jdbc:postgresql://localhost:15432/postgres
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+      jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+    secondary:
+      jdbc-url: jdbc:postgresql://localhost:25432/postgres
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+      jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  liquibase:
+      change-log: classpath:/db/changelog/changelog.xml
+      enabled: true
+      url: ${spring.datasource.primary.jdbc-url}
+      user: ${spring.datasource.primary.username}
+      password: ${spring.datasource.primary.password}
+
