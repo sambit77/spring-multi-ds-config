@@ -3,7 +3,7 @@ package com.example.spring_multi_ds_config.entity.primary;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", schema = "public")
 public class PrimaryUser {
 
     @Id

@@ -1,13 +1,11 @@
 package com.example.spring_multi_ds_config.controller;
 
 import com.example.spring_multi_ds_config.Service.MyService;
+import com.example.spring_multi_ds_config.entity.RequestDto;
 import com.example.spring_multi_ds_config.entity.primary.PrimaryUser;
 import com.example.spring_multi_ds_config.entity.secondary.SecondaryOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -29,5 +27,11 @@ public class MyController {
     public SecondaryOrder saveSecondaryOrder(@RequestBody SecondaryOrder order) {
 
         return  service.saveSecondaryOrder(order);
+    }
+
+    @PutMapping("/primary/updatename")
+    public int updatePrimaryUserName(@RequestBody RequestDto requestDto) {
+
+        return  service.updatePrimaryUserName(requestDto);
     }
 }
